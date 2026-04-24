@@ -1,0 +1,224 @@
+/* ===== CONVOCATORIA ===== */
+.subtitulo {
+    font-size: 45px;
+    margin-bottom: 38px;
+}
+
+.convocatoria-contenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.convocatoria-texto{
+    width: 48%;
+}
+
+.convocatoria-texto p{
+    text-align: left;
+}
+
+.convocatoria-texto h3{
+    font-size: 28px;
+    color: #611232;
+    margin-bottom: 15px;
+}
+
+.convocatoria-texto p{
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.convocatoria-texto ul{
+    margin: 10px 0 20px 20px;
+    color: #444;
+}
+
+.convocatoria-texto h4{
+    text-align: left;
+    margin-bottom: 10px;
+    color: rgb(109, 44, 69);
+}
+
+.nota{
+    font-size: 13px;  
+    margin-top: 20px; 
+    color: #555;      
+}
+
+/* IMAGEN */
+.convocatoria-img{
+    width: 42%;
+}
+
+#nosotros{
+    background: linear-gradient(180deg, #f9f9f9, #ffffff);
+}
+
+.intro-conocenos{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== TARJETAS===== */
+
+.checklist-nosotros{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* CONTENEDOR */
+.flip-card{
+    background: transparent;
+    width: 260px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+/* CARAS */
+.flip-card-front,
+.flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* FRENTE */
+.flip-card-front{
+    background: linear-gradient(135deg, #611232, #c20c70);
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ATRÁS */
+.flip-card-back{
+    background: #ffffff;
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 14px;
+    line-height: 1.6;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.datos-cecyt{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.dato{
+    text-align: center;
+}
+
+.dato h3{
+    font-size: 28px;
+    color: #c20c70;
+}
+
+.dato p{
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== CAMPO LABORAL ===== */
+
+.campo-laboral{
+    padding: 70px 0;
+    background: linear-gradient(180deg, #f9f9f9, #ffffff);
+    text-align: center;
+}
+
+.descripcion-campo{
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+.lista-campo{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* TARJETAS */
+.item-campo{
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-campo i{
+    font-size: 40px;
+    color: #c20c70;
+}
+
+.item-campo p{
+    font-size: 14px;
+    color: #333;
+}
+
+.item-campo:hover{
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.animar{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.animar.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px){
+    .convocatoria-texto,
+    .convocatoria-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .convocatoria-texto ul{
+        text-align: left;
+    }
+}
